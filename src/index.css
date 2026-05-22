@@ -1,9 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 
+body {
+  font-family: system-ui, sans-serif;
+  background: green;
+  color: white;
+  text-align: center;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  background: #f4a52c;
+  color: #3a2400;
+  font-weight: bold;
+}
+
+.welcome h1 {
+  font-size: 2.5rem;
+}
+
+.high-scores {
+  margin-top: 1rem;
+}
+
+.high-scores ul {
+  list-style: none;
+  padding: 0;
+}
+
+.holes {
+  display: grid;
+  grid-template-columns: repeat(3, 120px); /* 3x3 grid of holes */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Each hole uses the hole image as its background. */
 .hole {
-  background: url("/hole.png") no-repeat center/contain;
+  width: 120px;
+  height: 120px;
+  background-image: url("/hole.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* The mole is a button so it is keyboard-clickable too.
+   It uses the mole image as its background. */
 .mole {
-  background-image: url("/mole.png");
+  width: 100px;
+  height: 100px;
+  background: url("/mole.png") center / contain no-repeat;
+  border: none;
+  padding: 0;
 }
-
